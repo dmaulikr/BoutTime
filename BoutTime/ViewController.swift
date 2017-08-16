@@ -48,22 +48,48 @@ class ViewController: UIViewController {
         // Become first responder for shake events
         self.becomeFirstResponder()
         
-        round = Round()
-        
+        // configure event views' appearance
         configureEventViews()
-        disableEventButtons()
-        nextRoundButton.isHidden = true
-        tapEventsLabel.isHidden = true
         
-        loadEventsToButtons()
+        // load first round
+        newRound()
     }
+    
+    
+    // MARK: - Main game logic
     
     func endRound() {
         if round.checkAnswers() {
-            print("correct")
+            print("Right!")
         } else {
-            print("failure")
+            print("wrong!")
         }
+        enableEventButtons()
+        disableMoveButtons()
+        nextRoundButton.isHidden = false
+        tapEventsLabel.isHidden = false
+        loadNextRoundWithDelay(seconds: 2)
+    }
+    
+    func loadNextRoundWithDelay(seconds: Int) {
+        // Converts a delay in seconds to nanoseconds as signed 64 bit integer
+        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
+        // Calculates a time value to execute the method given current time and delay
+        let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
+        
+        // Executes the nextRound method at the dispatch time on the main queue
+        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
+            self.newRound()
+        }
+    }
+    
+    func newRound() {
+        round = Round()
+        disableEventButtons()
+        enableMoveButtons()
+        nextRoundButton.isHidden = true
+        tapEventsLabel.isHidden = true
+        loadEventsToButtons()
     }
     
     
@@ -79,10 +105,13 @@ class ViewController: UIViewController {
     // Trigger events upon shaking
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            print(round.checkAnswers())
+            endRound()
         }
     }
     
+    
+    // MARK: - Visual methods
+
     func configureEventViews() {
         eventViewOne.layer.cornerRadius = 5
         eventViewOne.layer.masksToBounds = true
@@ -94,11 +123,27 @@ class ViewController: UIViewController {
         eventViewFour.layer.masksToBounds = true
     }
     
+    func enableEventButtons() {
+        eventButtonOne.isEnabled = true
+        eventButtonTwo.isEnabled = true
+        eventButtonThree.isEnabled = true
+        eventButtonFour.isEnabled = true
+    }
+    
     func disableEventButtons() {
         eventButtonOne.isEnabled = false
         eventButtonTwo.isEnabled = false
         eventButtonThree.isEnabled = false
         eventButtonFour.isEnabled = false
+    }
+    
+    func enableMoveButtons() {
+        moveDownFullButton.isEnabled = true
+        moveUpHalfButtonOne.isEnabled = true
+        moveDownHalfButtonOne.isEnabled = true
+        moveUpHalfButtonTwo.isEnabled = true
+        moveDownHalfButtonTwo.isEnabled = true
+        MoveUpFullButton.isEnabled = true
     }
     
     func disableMoveButtons() {
