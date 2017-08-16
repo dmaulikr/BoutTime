@@ -12,195 +12,179 @@
 	</dict>
 	<dict>
 		<key>description</key>
-		<string>lyft</string>
+		<string>Product Hunt</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2013-11-01T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Product_Hunt</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Lyft</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2012-05-05T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Lyft</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Snap (as Picabo)</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2011-07-07T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Snapchat</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Stripe</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2010-04-30T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Stripe_(company)</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>500 Startups</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2010-10-13T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/500_Startups</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Instagram</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2010-10-05T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_instagram</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>AngelList</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2010-01-01T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://www.crunchbase.com/organization/angellist</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Square</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2009-02-01T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Timeline_of_square</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Uber</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2009-03-17T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Uber_(company)</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Airbnb</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2008-08-10T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Airbnb</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Twitter</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2006-03-21T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Twitter</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Y Combinator</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2005-03-11T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Y_Combinator_(company)</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Facebook</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2004-02-04T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Facebook</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Shopify</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2004-03-04T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Shopify</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>UsTwo</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2004-11-01T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://ustwo.com/</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Wordpress</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2003-05-26T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/WordPress</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Tesla</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2003-07-06T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Tesla,_Inc.</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>SpaceX</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2002-02-02T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/History_of_SpaceX</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Mailchimp</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>2001-03-31T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/MailChimp</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Salesforce</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>1999-02-04T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Salesforce.com</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>Google</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>1998-09-03T23:00:00Z</date>
 		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/Google</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string></string>
+		<string>PayPal</string>
 		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
+		<date>1998-12-01T00:00:00Z</date>
 		<key>url</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>description</key>
-		<string></string>
-		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
-		<key>url</key>
-		<string></string>
-	</dict>
-	<dict>
-		<key>description</key>
-		<string></string>
-		<key>date</key>
-		<date>1976-03-31T23:00:00Z</date>
-		<key>url</key>
-		<string></string>
+		<string>https://en.wikipedia.org/wiki/PayPal#Early_history</string>
 	</dict>
 	<dict>
 		<key>description</key>
@@ -209,6 +193,14 @@
 		<date>1976-03-31T23:00:00Z</date>
 		<key>url</key>
 		<string>https://en.wikipedia.org/wiki/Apple_Inc</string>
+	</dict>
+	<dict>
+		<key>description</key>
+		<string>Microsoft</string>
+		<key>date</key>
+		<date>1975-04-03T23:00:00Z</date>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Microsoft</string>
 	</dict>
 </array>
 </plist>
