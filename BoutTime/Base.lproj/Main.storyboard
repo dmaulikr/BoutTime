@@ -27,13 +27,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-0c-wjK">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event label one" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCe-lE-xN7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-mG-233">
                                                         <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
-                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <color key="textColor" red="0.17086112499237061" green="0.36996743083000183" blue="0.48245236277580261" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <state key="normal" title="Event Button One">
+                                                            <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vav-xV-gZ5">
                                                         <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
                                                         <constraints>
@@ -59,13 +59,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGB-ge-DxQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event label two" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw0-hU-TDS">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-LL-pa8">
                                                         <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
-                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <color key="textColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <state key="normal" title="Event Button Two">
+                                                            <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-Jg-98S">
                                                         <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
                                                         <subviews>
@@ -107,13 +107,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE1-68-UXe">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event label three" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3os-WV-P5O">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-Kb-6Qe">
                                                         <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
-                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <color key="textColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <state key="normal" title="Event Button Three">
+                                                            <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-2s-mGk">
                                                         <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
                                                         <subviews>
@@ -155,13 +155,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-pM-Jk6">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event label four" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-vS-gJn">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-vZ-1Ks">
                                                         <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
-                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                        <color key="textColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <state key="normal" title="Event Button Four">
+                                                            <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-v2-NYz">
                                                         <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
                                                         <constraints>
@@ -210,6 +210,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MoveUpFullButton" destination="9Yl-v2-NYz" id="jiV-h8-Kus"/>
+                        <outlet property="eventButtonFour" destination="L4m-vZ-1Ks" id="Z35-WQ-8wO"/>
+                        <outlet property="eventButtonOne" destination="Ajr-mG-233" id="ZMA-Ps-QsX"/>
+                        <outlet property="eventButtonThree" destination="nCM-Kb-6Qe" id="5K5-id-ICC"/>
+                        <outlet property="eventButtonTwo" destination="tGG-LL-pa8" id="Fzz-kG-xFw"/>
+                        <outlet property="moveDownFullButton" destination="vav-xV-gZ5" id="5gY-sR-QBq"/>
+                        <outlet property="moveDownHalfButtonOne" destination="uVV-Hq-gBp" id="Lvb-un-IzC"/>
+                        <outlet property="moveDownHalfButtonTwo" destination="3AZ-nG-1yY" id="ghA-Kz-Rmj"/>
+                        <outlet property="moveUpHalfButtonOne" destination="AYI-Th-X4q" id="nDs-UD-hSR"/>
+                        <outlet property="moveUpHalfButtonTwo" destination="uwN-1Q-kxC" id="NvW-y3-QHe"/>
+                        <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
