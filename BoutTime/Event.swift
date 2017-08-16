@@ -11,21 +11,15 @@ import Foundation
 protocol Event {
     var description: String { get }
     var date: Date { get }
-    var url: URL { get }
+    var url: String { get }
 }
 
 struct CompanyFounding: Event {
     var description: String
     let date: Date
-    let url: URL
+    let url: String
     
-    init(description: String, date: Date, url: URL) {
-        self.description = description
-        self.date = date
-        self.url = url
-    }
-    
-    init(company: String, date: Date, url: URL) {
+    init(company: String, date: Date, url: String) {
         self.description = "\(company) is founded"
         self.date = date
         self.url = url

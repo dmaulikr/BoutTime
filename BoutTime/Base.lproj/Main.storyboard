@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,27 +15,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PUs-Zn-RZb">
-                                <rect key="frame" x="20" y="25" width="280" height="430"/>
+                                <rect key="frame" x="20" y="30" width="374" height="430"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-qj-Wc4">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-0c-wjK">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-mG-233">
-                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="100"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Event Button One">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vav-xV-gZ5">
-                                                        <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
+                                                        <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vav-xV-gZ5" secondAttribute="height" multiplier="158:457" id="2U8-la-bzG"/>
                                                             <constraint firstAttribute="height" constant="100" id="4FV-XW-4Fe"/>
@@ -54,23 +54,23 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-20-qV6">
-                                        <rect key="frame" x="0.0" y="110" width="280" height="100"/>
+                                        <rect key="frame" x="0.0" y="110" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGB-ge-DxQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-LL-pa8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="100"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Event Button Two">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-Jg-98S">
-                                                        <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
+                                                        <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYI-Th-X4q">
-                                                                <rect key="frame" x="0.0" y="0.0" width="34.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333314" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="AYI-Th-X4q" secondAttribute="height" multiplier="158:229" id="Y2X-JB-qGK"/>
                                                                     <constraint firstAttribute="height" constant="50" id="qWd-oc-HE0"/>
@@ -78,7 +78,7 @@
                                                                 <state key="normal" title="Button" image="up_half"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVV-Hq-gBp">
-                                                                <rect key="frame" x="0.0" y="50" width="34.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="50" width="34.333333333333314" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="uVV-Hq-gBp" secondAttribute="height" multiplier="158:229" id="JZs-T0-f9a"/>
                                                                     <constraint firstAttribute="height" constant="50" id="QNW-z9-FLj"/>
@@ -102,23 +102,23 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jci-Cj-awT">
-                                        <rect key="frame" x="0.0" y="220" width="280" height="100"/>
+                                        <rect key="frame" x="0.0" y="220" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE1-68-UXe">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-Kb-6Qe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="100"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Event Button Three">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-2s-mGk">
-                                                        <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
+                                                        <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-1Q-kxC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="34.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333314" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="uwN-1Q-kxC" secondAttribute="height" multiplier="158:229" id="Sm5-Tj-wu7"/>
                                                                     <constraint firstAttribute="height" constant="50" id="cc2-WP-xs0"/>
@@ -126,7 +126,7 @@
                                                                 <state key="normal" title="Button" image="up_half"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AZ-nG-1yY">
-                                                                <rect key="frame" x="0.0" y="50" width="34.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="50" width="34.333333333333314" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="3AZ-nG-1yY" secondAttribute="height" multiplier="158:229" id="gam-SY-Ieq"/>
                                                                     <constraint firstAttribute="height" constant="50" id="zTV-Mc-eg1"/>
@@ -150,20 +150,20 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAz-8Y-jBB">
-                                        <rect key="frame" x="0.0" y="330" width="280" height="100"/>
+                                        <rect key="frame" x="0.0" y="330" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-pM-Jk6">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L4m-vZ-1Ks">
-                                                        <rect key="frame" x="0.0" y="0.0" width="245.5" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="339.66666666666669" height="100"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="Event Button Four">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-v2-NYz">
-                                                        <rect key="frame" x="245.5" y="0.0" width="34.5" height="100"/>
+                                                        <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="UG0-y0-UbR"/>
                                                             <constraint firstAttribute="width" secondItem="9Yl-v2-NYz" secondAttribute="height" multiplier="158:457" id="t2z-j7-aPu"/>
@@ -184,7 +184,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgl-bf-Ucw">
-                                <rect key="frame" x="74" y="478.5" width="172" height="40"/>
+                                <rect key="frame" x="121" y="646.66666666666663" width="172" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Lgl-bf-Ucw" secondAttribute="height" multiplier="306:71" id="2an-Ol-Uwq"/>
                                     <constraint firstAttribute="height" constant="40" id="ibO-Pm-l6D"/>
@@ -192,7 +192,7 @@
                                 <state key="normal" title="Button" image="next_round_success"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap events to learn more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-Z6-rKB">
-                                <rect key="frame" x="70.5" y="528.5" width="179" height="19.5"/>
+                                <rect key="frame" x="117.66666666666669" y="696.66666666666652" width="178.66666666666663" height="19.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.1030007063037444" green="0.65085915400437555" blue="0.86429251269035534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +205,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7w1-Z6-rKB" secondAttribute="bottom" constant="20" id="Ggf-lp-JV7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PUs-Zn-RZb" secondAttribute="trailing" constant="20" id="Zpy-i3-deY"/>
                             <constraint firstItem="7w1-Z6-rKB" firstAttribute="top" secondItem="Lgl-bf-Ucw" secondAttribute="bottom" constant="10" id="q0G-LJ-Lnk"/>
-                            <constraint firstItem="PUs-Zn-RZb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="wiX-0N-z09"/>
+                            <constraint firstItem="PUs-Zn-RZb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wiX-0N-z09"/>
                             <constraint firstItem="7w1-Z6-rKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwh-es-RFX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -216,12 +216,17 @@
                         <outlet property="eventButtonOne" destination="Ajr-mG-233" id="ZMA-Ps-QsX"/>
                         <outlet property="eventButtonThree" destination="nCM-Kb-6Qe" id="5K5-id-ICC"/>
                         <outlet property="eventButtonTwo" destination="tGG-LL-pa8" id="Fzz-kG-xFw"/>
+                        <outlet property="eventViewFour" destination="dAz-8Y-jBB" id="ouA-au-vkF"/>
+                        <outlet property="eventViewOne" destination="Tnm-qj-Wc4" id="NeE-5Z-j2G"/>
+                        <outlet property="eventViewThree" destination="Jci-Cj-awT" id="cfc-yw-xfN"/>
+                        <outlet property="eventViewTwo" destination="Gew-20-qV6" id="Hgt-3i-bH5"/>
                         <outlet property="moveDownFullButton" destination="vav-xV-gZ5" id="5gY-sR-QBq"/>
                         <outlet property="moveDownHalfButtonOne" destination="uVV-Hq-gBp" id="Lvb-un-IzC"/>
                         <outlet property="moveDownHalfButtonTwo" destination="3AZ-nG-1yY" id="ghA-Kz-Rmj"/>
                         <outlet property="moveUpHalfButtonOne" destination="AYI-Th-X4q" id="nDs-UD-hSR"/>
                         <outlet property="moveUpHalfButtonTwo" destination="uwN-1Q-kxC" id="NvW-y3-QHe"/>
                         <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>
+                        <outlet property="tapEventsLabel" destination="7w1-Z6-rKB" id="U2q-LR-Iv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
