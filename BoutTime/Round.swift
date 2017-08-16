@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameKit
 
 class Round {
     // ordered list of (4) events to display
@@ -16,8 +17,26 @@ class Round {
         self.events = events
     }
     
-    func generateEvents() {
+    convenience init() {
+        // Get events from plist file
+        var allEvents: [Event] = []
+        do {
+            let array = try PListConverter.array(fromFile: "EventList", ofType: "plist")
+            allEvents = try EventListUnarchiver.eventList(fromArray: array)
+        } catch let error {
+            fatalError("\(error)")
+        }
         
+        // shuffle events array
+        allEvents = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allEvents) as! [Event]
+        
+        // select first 4 events in shuffled array
+        var shortEvents: [Event] = []
+        for i in 1...4 {
+            shortEvents.append(allEvents[i])
+        }
+
+        self.init(events: shortEvents)
     }
     
     func checkAnswers() -> Bool {

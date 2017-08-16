@@ -35,26 +35,24 @@ class ViewController: UIViewController {
     
     
     // MARK: - Setup
-    let round: Round
+    var round: Round
     
     required init?(coder aDecoder: NSCoder) {
-        do {
-            let array = try PListConverter.array(fromFile: "EventList", ofType: "plist")
-            let events = try EventListUnarchiver.eventList(fromArray: array)
-            self.round = Round(events: events)
-        } catch let error {
-            fatalError("\(error)")
-        }
-        
+        self.round = Round()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        round = Round()
         configureEventViews()
         disableEventButtons()
         nextRoundButton.isHidden = true
         tapEventsLabel.isHidden = true
+        
+        for event in round.events {
+            print(event)
+        }
     }
     
     func disableEventButtons() {
