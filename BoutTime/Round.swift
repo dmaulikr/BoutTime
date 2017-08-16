@@ -32,7 +32,7 @@ class Round {
         
         // select first 4 events in shuffled array
         var shortEvents: [Event] = []
-        for i in 1...4 {
+        for i in 0...3 {
             shortEvents.append(allEvents[i])
         }
 
@@ -40,6 +40,16 @@ class Round {
     }
     
     func checkAnswers() -> Bool {
+        // generate ordered list
+        let sortedEvents = events.sorted(by: { $0.date < $1.date })
+        
+        // Goes through consecutive pairs in the sorted and user-attempted lists of events
+        // Compares the dates on each to check that the attempted order is correct
+        for i in 0...3 {
+            if sortedEvents[i].date != events[i].date {
+                return false
+            }
+        }
         return true
     }
 }

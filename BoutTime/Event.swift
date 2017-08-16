@@ -26,12 +26,16 @@ struct CompanyFounding: Event {
     }
 }
 
-extension CompanyFounding: Comparable {
-    static func == (lhs: CompanyFounding, rhs: CompanyFounding) -> Bool {
-        return lhs.date == rhs.date
-    }
-    
-    static func < (lhs: CompanyFounding, rhs: CompanyFounding) -> Bool {
-        return lhs.date < rhs.date
-    }
+//extension CompanyFounding: Comparable {
+//    static func < (lhs: CompanyFounding, rhs: CompanyFounding) -> Bool {
+//        return lhs.date < rhs.date
+//    }
+//}
+
+func ==<T: Event>(lhs: T, rhs: T) -> Bool {
+    return lhs.date == rhs.date
+}
+
+func <<T: Event>(lhs: T, rhs: T) -> Bool {
+    return lhs.date < rhs.date
 }

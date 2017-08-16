@@ -44,24 +44,45 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Become first responder for shake events
+        self.becomeFirstResponder()
+        
         round = Round()
+        
         configureEventViews()
         disableEventButtons()
         nextRoundButton.isHidden = true
         tapEventsLabel.isHidden = true
         
-        for event in round.events {
-            print(event)
+        loadEventsToButtons()
+    }
+    
+    func endRound() {
+        if round.checkAnswers() {
+            print("correct")
+        } else {
+            print("failure")
         }
     }
     
-    func disableEventButtons() {
-        eventButtonOne.isEnabled = false
-        eventButtonTwo.isEnabled = false
-        eventButtonThree.isEnabled = false
-        eventButtonFour.isEnabled = false
+    
+    // MARK: - Shake Functionality
+    
+    // Enable ViewController as first responder
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
     }
-
+    
+    // Trigger events upon shaking
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print(round.checkAnswers())
+        }
+    }
+    
     func configureEventViews() {
         eventViewOne.layer.cornerRadius = 5
         eventViewOne.layer.masksToBounds = true
@@ -73,6 +94,13 @@ class ViewController: UIViewController {
         eventViewFour.layer.masksToBounds = true
     }
     
+    func disableEventButtons() {
+        eventButtonOne.isEnabled = false
+        eventButtonTwo.isEnabled = false
+        eventButtonThree.isEnabled = false
+        eventButtonFour.isEnabled = false
+    }
+    
     func disableMoveButtons() {
         moveDownFullButton.isEnabled = false
         moveUpHalfButtonOne.isEnabled = false
@@ -80,6 +108,13 @@ class ViewController: UIViewController {
         moveUpHalfButtonTwo.isEnabled = false
         moveDownHalfButtonTwo.isEnabled = false
         MoveUpFullButton.isEnabled = false
+    }
+    
+    func loadEventsToButtons() {
+        eventButtonOne.setTitle(round.events[0].description, for: .normal)
+        eventButtonTwo.setTitle(round.events[1].description, for: .normal)
+        eventButtonThree.setTitle(round.events[2].description, for: .normal)
+        eventButtonFour.setTitle(round.events[3].description, for: .normal)
     }
 }
 
