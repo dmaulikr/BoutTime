@@ -261,7 +261,7 @@
                         <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>
                         <outlet property="tapEventsLabel" destination="7w1-Z6-rKB" id="U2q-LR-Iv5"/>
                         <segue destination="fps-cT-Glp" kind="show" identifier="Web" id="jtk-ZO-60J"/>
-                        <segue destination="XUA-qw-Ecs" kind="presentation" identifier="Score" id="OUR-U2-ADK"/>
+                        <segue destination="XUA-qw-Ecs" kind="show" identifier="Score" id="OUR-U2-ADK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -296,7 +296,7 @@
                                 </constraints>
                                 <state key="normal" image="play_again"/>
                                 <connections>
-                                    <segue destination="As3-sp-yMl" kind="unwind" unwindAction="unwindToGameWithUnwindSegue:" id="P4I-r3-qqP"/>
+                                    <segue destination="As3-sp-yMl" kind="unwind" identifier="PlayAgain" unwindAction="unwindToGameWithUnwindSegue:" id="P4I-r3-qqP"/>
                                 </connections>
                             </button>
                         </subviews>

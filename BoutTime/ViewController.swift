@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     
     
     // MARK: - Setup
+    var numberOfRounds: Int = 0
+    var correctAnswers: Int = 0
     var round: Round
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,12 +61,15 @@ class ViewController: UIViewController {
     // MARK: - Main game logic
     
     func endRound() {
-        if round.checkAnswers() {
-            // print("Right!")
-            nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_success"), for: .normal)
+        if numberOfRounds >= 6 {
+            nextRoundButton.setImage(#imageLiteral(resourceName: "show_score_button"), for: .normal)
         } else {
-            // print("wrong!")
-            nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
+            if round.checkAnswers() {
+                correctAnswers += 1
+                nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_success"), for: .normal)
+            } else {
+                nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
+            }
         }
         enableEventButtons()
         disableMoveButtons()
@@ -74,6 +79,7 @@ class ViewController: UIViewController {
     
     func newRound() {
         round = Round()
+        numberOfRounds += 1
         disableEventButtons()
         enableMoveButtons()
         nextRoundButton.isHidden = true
@@ -81,8 +87,19 @@ class ViewController: UIViewController {
         loadEventsToButtons()
     }
     
-    @IBAction func nextRoundWasTapped(_ sender: Any) {
+    func newGame() {
+        numberOfRounds = 0
+        correctAnswers = 0
         newRound()
+    }
+    
+    @IBAction func nextRoundWasTapped(_ sender: Any) {
+        // If 6 rounds are completed then show score screen
+        if numberOfRounds >= 6 {
+            performSegue(withIdentifier: "Score", sender: sender)
+        } else {
+            newRound()
+        }
     }
     
     @IBAction func moveButtonWasTapped(_ sender: UIButton) {
@@ -182,28 +199,36 @@ class ViewController: UIViewController {
     
     // MARK: - Navigation
     
+    // Start new game if returning from score screen
     @IBAction func unwindToGame(unwindSegue: UIStoryboardSegue) {
-        
+        if unwindSegue.identifier == "PlayAgain" {
+            newGame()
+        }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var urlString = "https://facebook.com"
         if let senderButton = sender as? UIButton {
-            if senderButton == eventButtonOne {
-                urlString = round.events[0].url
-            } else if senderButton == eventButtonTwo {
-                urlString = round.events[1].url
-            } else if senderButton == eventButtonThree {
-                urlString = round.events[2].url
-            } else if senderButton == eventButtonFour {
-                urlString = round.events[3].url
+            // If Score segue is used, load score onto label.
+            if senderButton == nextRoundButton {
+                let scoreViewController = segue.destination as? ScoreViewController
+                scoreViewController?.score = correctAnswers
             } else {
-                print("ERROR - Invalid button")
+                // Launch appropriate webView for each event button
+                if senderButton == eventButtonOne {
+                    urlString = round.events[0].url
+                } else if senderButton == eventButtonTwo {
+                    urlString = round.events[1].url
+                } else if senderButton == eventButtonThree {
+                    urlString = round.events[2].url
+                } else if senderButton == eventButtonFour {
+                    urlString = round.events[3].url
+                }
+                let webViewController = segue.destination as? WebViewController
+                webViewController?.urlString = urlString
             }
         }
-    
-        let webViewController = segue.destination as? WebViewController
-        webViewController?.urlString = urlString
     }
     
     @IBAction func eventButtonTapped(_ sender: UIButton) {
