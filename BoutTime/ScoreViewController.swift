@@ -16,6 +16,8 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Update label with user score
         scoreLabel.text = "\(score)/6"
     }
 }

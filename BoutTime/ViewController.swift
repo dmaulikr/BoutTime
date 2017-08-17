@@ -85,27 +85,34 @@ class ViewController: UIViewController {
                 nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
             }
         }
+        // End and hide timer
         timer.invalidate()
         timerLabel.isHidden = true
+        
+        // Configure buttons
         enableEventButtons()
         disableMoveButtons()
         nextRoundButton.isHidden = false
+        
         informationLabel.text = "Tap events to learn more"
     }
     
     func newRound() {
+        // Restart and show timer
         timeRemaining = timerLength
         timerLabel.isHidden = false
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
         
         round = Round()
         numberOfRounds += 1
+        
+        // Configure buttons
         disableEventButtons()
         enableMoveButtons()
         nextRoundButton.isHidden = true
+        loadEventsToButtons()
         
         informationLabel.text = "Shake to complete"
-        loadEventsToButtons()
     }
     
     func newGame() {
@@ -165,7 +172,9 @@ class ViewController: UIViewController {
         }
     }
     
+    
     // MARK: - Timer
+    
     @objc
     func updateTimer() {
         // Updates the timer and the timer text (information) label
@@ -247,7 +256,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var urlString = "https://facebook.com"
+        // Default urlString
+        var urlString = "https://google.co.uk"
         if let senderButton = sender as? UIButton {
             // If Score segue is used, load score onto label.
             if senderButton == nextRoundButton {

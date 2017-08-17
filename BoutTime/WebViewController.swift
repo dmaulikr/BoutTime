@@ -11,11 +11,14 @@ import UIKit
 class WebViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
+    // default URL value
     var urlString: String = "https://google.co.uk"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         webView.delegate = self
+        
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
             webView.loadRequest(request)
@@ -26,15 +29,4 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

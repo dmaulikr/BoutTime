@@ -14,6 +14,7 @@ class SoundProvider {
     var incorrectSound: SystemSoundID = 1
     
     init() {
+        // Load all sound files
         let pathToCorrectSoundFile = Bundle.main.path(forResource: "correctSound", ofType: "wav")
         let correctSoundURL = URL(fileURLWithPath: pathToCorrectSoundFile!)
         AudioServicesCreateSystemSoundID(correctSoundURL as CFURL, &correctSound)
