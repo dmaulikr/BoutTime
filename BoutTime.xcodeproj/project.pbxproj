@@ -18,6 +18,7 @@
 		EAA418701F46346D009EEFBF /* SoundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4186F1F46346D009EEFBF /* SoundProvider.swift */; };
 		EAA418711F463BED009EEFBF /* correctSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = EACC21771F4489BB0085C331 /* correctSound.wav */; };
 		EAA418721F463BED009EEFBF /* incorrectSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = EACC21761F4489BB0085C331 /* incorrectSound.wav */; };
+		EAA418741F463ECC009EEFBF /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA418731F463ECC009EEFBF /* Timer.swift */; };
 		EACC21751F4455840085C331 /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EACC21741F4455840085C331 /* EventList.plist */; };
 		EACC21791F45B0230085C331 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC21781F45B0230085C331 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		EA99CBF91F4333CA009B9E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA4186D1F45EA4A009EEFBF /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		EAA4186F1F46346D009EEFBF /* SoundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProvider.swift; sourceTree = "<group>"; };
+		EAA418731F463ECC009EEFBF /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		EACC21741F4455840085C331 /* EventList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
 		EACC21761F4489BB0085C331 /* incorrectSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incorrectSound.wav; sourceTree = "<group>"; };
 		EACC21771F4489BB0085C331 /* correctSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctSound.wav; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				EAA4186D1F45EA4A009EEFBF /* ScoreViewController.swift */,
 				EA6CD7D41F443651002DC4DA /* Event.swift */,
 				EA6CD7D61F44365C002DC4DA /* Round.swift */,
+				EAA418731F463ECC009EEFBF /* Timer.swift */,
 				EA99CBF11F4333CA009B9E95 /* Main.storyboard */,
 				EA99CBF61F4333CA009B9E95 /* LaunchScreen.storyboard */,
 				EA99CBF41F4333CA009B9E95 /* Assets.xcassets */,
@@ -169,6 +172,7 @@
 				EAA418701F46346D009EEFBF /* SoundProvider.swift in Sources */,
 				EA99CBEE1F4333CA009B9E95 /* AppDelegate.swift in Sources */,
 				EAA4186E1F45EA4A009EEFBF /* ScoreViewController.swift in Sources */,
+				EAA418741F463ECC009EEFBF /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

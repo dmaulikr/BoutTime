@@ -230,6 +230,12 @@
                                 <color key="textColor" red="0.1030007063037444" green="0.65085915400437555" blue="0.86429251269035534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sls-8m-ppI">
+                                <rect key="frame" x="170" y="648.66666666666663" width="74.666666666666657" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0410788394510746" green="0.15734067559242249" blue="0.2824760377407074" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -237,6 +243,8 @@
                             <constraint firstItem="Lgl-bf-Ucw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="532-Xe-QKc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7w1-Z6-rKB" secondAttribute="bottom" constant="20" id="Ggf-lp-JV7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PUs-Zn-RZb" secondAttribute="trailing" constant="20" id="Zpy-i3-deY"/>
+                            <constraint firstItem="sls-8m-ppI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fe6-tf-95H"/>
+                            <constraint firstItem="7w1-Z6-rKB" firstAttribute="top" secondItem="sls-8m-ppI" secondAttribute="bottom" constant="5" id="gcI-Ht-oCF"/>
                             <constraint firstItem="7w1-Z6-rKB" firstAttribute="top" secondItem="Lgl-bf-Ucw" secondAttribute="bottom" constant="10" id="q0G-LJ-Lnk"/>
                             <constraint firstItem="PUs-Zn-RZb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="wiX-0N-z09"/>
                             <constraint firstItem="7w1-Z6-rKB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwh-es-RFX"/>
@@ -252,14 +260,15 @@
                         <outlet property="eventViewOne" destination="Tnm-qj-Wc4" id="NeE-5Z-j2G"/>
                         <outlet property="eventViewThree" destination="Jci-Cj-awT" id="cfc-yw-xfN"/>
                         <outlet property="eventViewTwo" destination="Gew-20-qV6" id="Hgt-3i-bH5"/>
+                        <outlet property="informationLabel" destination="7w1-Z6-rKB" id="OKt-vh-NTi"/>
                         <outlet property="moveDownFullButton" destination="vav-xV-gZ5" id="5gY-sR-QBq"/>
                         <outlet property="moveDownHalfButtonOne" destination="uVV-Hq-gBp" id="Lvb-un-IzC"/>
                         <outlet property="moveDownHalfButtonTwo" destination="3AZ-nG-1yY" id="ghA-Kz-Rmj"/>
                         <outlet property="moveUpFullButton" destination="9Yl-v2-NYz" id="koc-BA-iJD"/>
                         <outlet property="moveUpHalfButtonOne" destination="AYI-Th-X4q" id="nDs-UD-hSR"/>
                         <outlet property="moveUpHalfButtonTwo" destination="uwN-1Q-kxC" id="NvW-y3-QHe"/>
-                        <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>
-                        <outlet property="tapEventsLabel" destination="7w1-Z6-rKB" id="U2q-LR-Iv5"/>
+                        <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="IaB-oc-bFu"/>
+                        <outlet property="timerLabel" destination="sls-8m-ppI" id="hNx-Ej-rqy"/>
                         <segue destination="fps-cT-Glp" kind="show" identifier="Web" id="jtk-ZO-60J"/>
                         <segue destination="XUA-qw-Ecs" kind="show" identifier="Score" id="OUR-U2-ADK"/>
                     </connections>

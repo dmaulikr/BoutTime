@@ -31,11 +31,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var moveUpFullButton: UIButton!
     // Next round button
     @IBOutlet weak var nextRoundButton: UIButton!
-    // Tap events label
-    @IBOutlet weak var tapEventsLabel: UILabel!
-    
+    // Information label
+    @IBOutlet weak var informationLabel: UILabel!
+    // Timer Label
+    @IBOutlet weak var timerLabel: UILabel!
     
     // MARK: - Setup
+    // Game information
     var numberOfRounds: Int = 0
     var correctAnswers: Int = 0
     var round: Round
@@ -43,8 +45,14 @@ class ViewController: UIViewController {
     // Sounds
     var soundProvider = SoundProvider()
     
+    // Timer
+    var timer = Timer()
+    let timerLength = 60.0
+    var timeRemaining: Double
+    
     required init?(coder aDecoder: NSCoder) {
         self.round = Round()
+        self.timeRemaining = timerLength
         super.init(coder: aDecoder)
     }
     
@@ -77,19 +85,26 @@ class ViewController: UIViewController {
                 nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
             }
         }
+        timer.invalidate()
+        timerLabel.isHidden = true
         enableEventButtons()
         disableMoveButtons()
         nextRoundButton.isHidden = false
-        tapEventsLabel.isHidden = false
+        informationLabel.text = "Tap events to learn more"
     }
     
     func newRound() {
+        timeRemaining = timerLength
+        timerLabel.isHidden = false
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+        
         round = Round()
         numberOfRounds += 1
         disableEventButtons()
         enableMoveButtons()
         nextRoundButton.isHidden = true
-        tapEventsLabel.isHidden = true
+        
+        informationLabel.text = "Shake to complete"
         loadEventsToButtons()
     }
     
@@ -148,6 +163,25 @@ class ViewController: UIViewController {
         if motion == .motionShake {
             endRound()
         }
+    }
+    
+    // MARK: - Timer
+    @objc
+    func updateTimer() {
+        // Updates the timer and the timer text (information) label
+        if timeRemaining < 0.01 {
+            timer.invalidate()
+            endRound()
+        } else {
+            timeRemaining -= 0.01
+        }
+        let formatedTimer = String(format: "%.2f", timeRemaining)
+        timerLabel.text = formatedTimer
+    }
+    
+    func resetTimer() {
+        timer = Timer()
+        timeRemaining = timerLength
     }
     
     
