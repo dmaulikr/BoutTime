@@ -41,6 +41,9 @@
                                                             <constraint firstAttribute="height" constant="100" id="4FV-XW-4Fe"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="down_full"/>
+                                                        <connections>
+                                                            <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46b-eH-zS7"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -76,6 +79,9 @@
                                                                     <constraint firstAttribute="height" constant="50" id="qWd-oc-HE0"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
+                                                                <connections>
+                                                                    <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U2X-2Z-S1v"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVV-Hq-gBp">
                                                                 <rect key="frame" x="0.0" y="50" width="34.333333333333314" height="50"/>
@@ -84,6 +90,9 @@
                                                                     <constraint firstAttribute="height" constant="50" id="QNW-z9-FLj"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
+                                                                <connections>
+                                                                    <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRI-OX-BpU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -124,6 +133,9 @@
                                                                     <constraint firstAttribute="height" constant="50" id="cc2-WP-xs0"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="up_half"/>
+                                                                <connections>
+                                                                    <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9T-oH-Rq4"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AZ-nG-1yY">
                                                                 <rect key="frame" x="0.0" y="50" width="34.333333333333314" height="50"/>
@@ -132,6 +144,9 @@
                                                                     <constraint firstAttribute="height" constant="50" id="zTV-Mc-eg1"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="down_half"/>
+                                                                <connections>
+                                                                    <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGN-ah-Cki"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -169,6 +184,9 @@
                                                             <constraint firstAttribute="width" secondItem="9Yl-v2-NYz" secondAttribute="height" multiplier="158:457" id="t2z-j7-aPu"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="up_full"/>
+                                                        <connections>
+                                                            <action selector="moveButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMz-DG-BJP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -190,6 +208,9 @@
                                     <constraint firstAttribute="height" constant="40" id="ibO-Pm-l6D"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="next_round_success"/>
+                                <connections>
+                                    <action selector="nextRoundWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3FK-5d-2Gi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap events to learn more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w1-Z6-rKB">
                                 <rect key="frame" x="117.66666666666669" y="696.66666666666652" width="178.66666666666663" height="19.333333333333371"/>
@@ -211,7 +232,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="MoveUpFullButton" destination="9Yl-v2-NYz" id="jiV-h8-Kus"/>
                         <outlet property="eventButtonFour" destination="L4m-vZ-1Ks" id="Z35-WQ-8wO"/>
                         <outlet property="eventButtonOne" destination="Ajr-mG-233" id="ZMA-Ps-QsX"/>
                         <outlet property="eventButtonThree" destination="nCM-Kb-6Qe" id="5K5-id-ICC"/>
@@ -223,6 +243,7 @@
                         <outlet property="moveDownFullButton" destination="vav-xV-gZ5" id="5gY-sR-QBq"/>
                         <outlet property="moveDownHalfButtonOne" destination="uVV-Hq-gBp" id="Lvb-un-IzC"/>
                         <outlet property="moveDownHalfButtonTwo" destination="3AZ-nG-1yY" id="ghA-Kz-Rmj"/>
+                        <outlet property="moveUpFullButton" destination="9Yl-v2-NYz" id="koc-BA-iJD"/>
                         <outlet property="moveUpHalfButtonOne" destination="AYI-Th-X4q" id="nDs-UD-hSR"/>
                         <outlet property="moveUpHalfButtonTwo" destination="uwN-1Q-kxC" id="NvW-y3-QHe"/>
                         <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>

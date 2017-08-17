@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var moveDownHalfButtonOne: UIButton!
     @IBOutlet weak var moveUpHalfButtonTwo: UIButton!
     @IBOutlet weak var moveDownHalfButtonTwo: UIButton!
-    @IBOutlet weak var MoveUpFullButton: UIButton!
+    @IBOutlet weak var moveUpFullButton: UIButton!
     // Next round button
     @IBOutlet weak var nextRoundButton: UIButton!
     // Tap events label
@@ -60,27 +60,16 @@ class ViewController: UIViewController {
     
     func endRound() {
         if round.checkAnswers() {
-            print("Right!")
+            // print("Right!")
+            nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_success"), for: .normal)
         } else {
-            print("wrong!")
+            // print("wrong!")
+            nextRoundButton.setImage(#imageLiteral(resourceName: "next_round_fail"), for: .normal)
         }
         enableEventButtons()
         disableMoveButtons()
         nextRoundButton.isHidden = false
         tapEventsLabel.isHidden = false
-        loadNextRoundWithDelay(seconds: 2)
-    }
-    
-    func loadNextRoundWithDelay(seconds: Int) {
-        // Converts a delay in seconds to nanoseconds as signed 64 bit integer
-        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
-        // Calculates a time value to execute the method given current time and delay
-        let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
-        
-        // Executes the nextRound method at the dispatch time on the main queue
-        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
-            self.newRound()
-        }
     }
     
     func newRound() {
@@ -89,6 +78,35 @@ class ViewController: UIViewController {
         enableMoveButtons()
         nextRoundButton.isHidden = true
         tapEventsLabel.isHidden = true
+        loadEventsToButtons()
+    }
+    
+    @IBAction func nextRoundWasTapped(_ sender: Any) {
+        newRound()
+    }
+    
+    @IBAction func moveButtonWasTapped(_ sender: UIButton) {
+        if sender == moveDownFullButton || sender == moveUpHalfButtonOne {
+            swapWithEventBelow(eventIndex: 0)
+        } else if sender == moveDownHalfButtonOne || sender == moveUpHalfButtonTwo {
+            swapWithEventBelow(eventIndex: 1)
+        } else if sender == moveDownHalfButtonTwo || sender == moveUpFullButton {
+            swapWithEventBelow(eventIndex: 2)
+        } else {
+            print("ERROR - invalid button")
+        }
+    }
+
+    func swapWithEventBelow(eventIndex: Int) {
+        // Set placeholder events
+        let eventOne = round.events[eventIndex]
+        let eventTwo = round.events[eventIndex+1]
+        
+        // Reassign events back in events array
+        round.events[eventIndex] = eventTwo
+        round.events[eventIndex+1] = eventOne
+        
+        // Refresh text on buttons
         loadEventsToButtons()
     }
     
@@ -110,7 +128,7 @@ class ViewController: UIViewController {
     }
     
     
-    // MARK: - Visual methods
+    // MARK: - Visual configuration
 
     func configureEventViews() {
         eventViewOne.layer.cornerRadius = 5
@@ -143,7 +161,7 @@ class ViewController: UIViewController {
         moveDownHalfButtonOne.isEnabled = true
         moveUpHalfButtonTwo.isEnabled = true
         moveDownHalfButtonTwo.isEnabled = true
-        MoveUpFullButton.isEnabled = true
+        moveUpFullButton.isEnabled = true
     }
     
     func disableMoveButtons() {
@@ -152,7 +170,7 @@ class ViewController: UIViewController {
         moveDownHalfButtonOne.isEnabled = false
         moveUpHalfButtonTwo.isEnabled = false
         moveDownHalfButtonTwo.isEnabled = false
-        MoveUpFullButton.isEnabled = false
+        moveUpFullButton.isEnabled = false
     }
     
     func loadEventsToButtons() {
@@ -162,4 +180,18 @@ class ViewController: UIViewController {
         eventButtonFour.setTitle(round.events[3].description, for: .normal)
     }
 }
+
+
+//    func loadNextRoundWithDelay(seconds: Int) {
+//        // Converts a delay in seconds to nanoseconds as signed 64 bit integer
+//        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
+//        // Calculates a time value to execute the method given current time and delay
+//        let dispatchTime = DispatchTime.now() + Double(delay) / Double(NSEC_PER_SEC)
+//
+//        // Executes the nextRound method at the dispatch time on the main queue
+//        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
+//            self.newRound()
+//        }
+//    }
+
 
