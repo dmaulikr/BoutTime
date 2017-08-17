@@ -179,6 +179,20 @@ class ViewController: UIViewController {
         eventButtonThree.setTitle(round.events[2].description, for: .normal)
         eventButtonFour.setTitle(round.events[3].description, for: .normal)
     }
+    
+    // MARK: - Navigation
+    
+    @IBAction func unwindToGame(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
+    @IBAction func eventButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "Web", sender: sender)
+    }
 }
 
 

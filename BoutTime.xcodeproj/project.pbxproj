@@ -15,6 +15,7 @@
 		EA99CBF51F4333CA009B9E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA99CBF41F4333CA009B9E95 /* Assets.xcassets */; };
 		EA99CBF81F4333CA009B9E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA99CBF61F4333CA009B9E95 /* LaunchScreen.storyboard */; };
 		EACC21751F4455840085C331 /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = EACC21741F4455840085C331 /* EventList.plist */; };
+		EACC21791F45B0230085C331 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC21781F45B0230085C331 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EACC21741F4455840085C331 /* EventList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EventList.plist; sourceTree = "<group>"; };
 		EACC21761F4489BB0085C331 /* IncorrectBuzz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = IncorrectBuzz.wav; sourceTree = "<group>"; };
 		EACC21771F4489BB0085C331 /* CorrectDing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CorrectDing.wav; sourceTree = "<group>"; };
+		EACC21781F45B0230085C331 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				EA99CBED1F4333CA009B9E95 /* AppDelegate.swift */,
 				EA99CBEF1F4333CA009B9E95 /* ViewController.swift */,
+				EACC21781F45B0230085C331 /* WebViewController.swift */,
 				EA6CD7D41F443651002DC4DA /* Event.swift */,
 				EA6CD7D61F44365C002DC4DA /* Round.swift */,
 				EA99CBF11F4333CA009B9E95 /* Main.storyboard */,
@@ -152,6 +155,7 @@
 				EA99CBF01F4333CA009B9E95 /* ViewController.swift in Sources */,
 				EA6CD7D51F443651002DC4DA /* Event.swift in Sources */,
 				EA6CD7D71F44365C002DC4DA /* Round.swift in Sources */,
+				EACC21791F45B0230085C331 /* WebViewController.swift in Sources */,
 				EA99CBEE1F4333CA009B9E95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

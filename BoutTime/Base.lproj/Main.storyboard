@@ -33,6 +33,9 @@
                                                         <state key="normal" title="Event Button One">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="eventButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nE5-9Q-DAT"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vav-xV-gZ5">
                                                         <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
@@ -68,6 +71,9 @@
                                                         <state key="normal" title="Event Button Two">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="eventButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fio-Fj-rzt"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-Jg-98S">
                                                         <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
@@ -122,6 +128,9 @@
                                                         <state key="normal" title="Event Button Three">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="eventButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bH0-2V-or2"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-2s-mGk">
                                                         <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
@@ -176,6 +185,9 @@
                                                         <state key="normal" title="Event Button Four">
                                                             <color key="titleColor" red="0.170861125" green="0.3699674308" blue="0.48245236279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="eventButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWH-VG-1B6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-v2-NYz">
                                                         <rect key="frame" x="339.66666666666674" y="0.0" width="34.333333333333314" height="100"/>
@@ -248,11 +260,63 @@
                         <outlet property="moveUpHalfButtonTwo" destination="uwN-1Q-kxC" id="NvW-y3-QHe"/>
                         <outlet property="nextRoundButton" destination="Lgl-bf-Ucw" id="DVF-DE-tca"/>
                         <outlet property="tapEventsLabel" destination="7w1-Z6-rKB" id="U2q-LR-Iv5"/>
+                        <segue destination="fps-cT-Glp" kind="show" identifier="Web" id="jtk-ZO-60J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-80.625" y="95.070422535211264"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9v1-K6-KxV">
+            <objects>
+                <viewController id="fps-cT-Glp" customClass="WebViewController" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JST-Vc-TQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-JR-96f">
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="webview_bar" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-hp-qfk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6vi-hp-qfk" secondAttribute="height" multiplier="207:25" id="M72-N1-der"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1R-Iz-2AW">
+                                <rect key="frame" x="379" y="9.6666666666666643" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T1R-Iz-2AW" secondAttribute="height" multiplier="1:1" id="9NH-yR-flk"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="MiY-ef-YmP" kind="unwind" unwindAction="unwindToGameWithUnwindSegue:" id="MeX-OS-JDN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LXc-lr-yDV" firstAttribute="trailing" secondItem="6Mc-JR-96f" secondAttribute="trailing" id="1JT-hJ-UXL"/>
+                            <constraint firstItem="6Mc-JR-96f" firstAttribute="top" secondItem="6vi-hp-qfk" secondAttribute="bottom" id="4PT-mD-K48"/>
+                            <constraint firstItem="6vi-hp-qfk" firstAttribute="top" secondItem="JST-Vc-TQd" secondAttribute="top" id="6wv-57-dgZ"/>
+                            <constraint firstItem="LXc-lr-yDV" firstAttribute="bottom" secondItem="6Mc-JR-96f" secondAttribute="bottom" id="G8J-HL-5e0"/>
+                            <constraint firstItem="LXc-lr-yDV" firstAttribute="trailing" secondItem="T1R-Iz-2AW" secondAttribute="trailing" constant="5" id="UuA-0o-NeP"/>
+                            <constraint firstItem="6vi-hp-qfk" firstAttribute="leading" secondItem="LXc-lr-yDV" secondAttribute="leading" id="eNg-Aa-Qy3"/>
+                            <constraint firstItem="LXc-lr-yDV" firstAttribute="trailing" secondItem="6vi-hp-qfk" secondAttribute="trailing" id="kqM-fg-2Wh"/>
+                            <constraint firstItem="T1R-Iz-2AW" firstAttribute="centerY" secondItem="6vi-hp-qfk" secondAttribute="centerY" id="sTb-NI-xVW"/>
+                            <constraint firstItem="6Mc-JR-96f" firstAttribute="leading" secondItem="LXc-lr-yDV" secondAttribute="leading" id="u2d-Jc-5lQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LXc-lr-yDV"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="6Mc-JR-96f" id="UIN-4j-cX5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAE-Xx-g8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MiY-ef-YmP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="94.565217391304358"/>
         </scene>
     </scenes>
     <resources>
@@ -261,5 +325,6 @@
         <image name="next_round_success" width="558" height="142"/>
         <image name="up_full" width="158" height="457"/>
         <image name="up_half" width="158" height="229"/>
+        <image name="webview_bar" width="1333" height="167"/>
     </resources>
 </document>
