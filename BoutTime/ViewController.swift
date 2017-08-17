@@ -187,7 +187,23 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        var urlString = "https://facebook.com"
+        if let senderButton = sender as? UIButton {
+            if senderButton == eventButtonOne {
+                urlString = round.events[0].url
+            } else if senderButton == eventButtonTwo {
+                urlString = round.events[1].url
+            } else if senderButton == eventButtonThree {
+                urlString = round.events[2].url
+            } else if senderButton == eventButtonFour {
+                urlString = round.events[3].url
+            } else {
+                print("ERROR - Invalid button")
+            }
+        }
+
+        let webViewController = segue.destination as? WebViewController
+        webViewController?.urlString = urlString
     }
     
     @IBAction func eventButtonTapped(_ sender: UIButton) {
