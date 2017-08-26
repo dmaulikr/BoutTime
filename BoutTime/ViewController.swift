@@ -131,6 +131,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func moveButtonWasTapped(_ sender: UIButton) {
+        // Swapping checks
         if sender == moveDownFullButton || sender == moveUpHalfButtonOne {
             swapWithEventBelow(eventIndex: 0)
         } else if sender == moveDownHalfButtonOne || sender == moveUpHalfButtonTwo {
@@ -140,8 +141,36 @@ class ViewController: UIViewController {
         } else {
             print("ERROR - invalid button")
         }
+        
+        // Reset button images
+        if sender == moveDownFullButton {
+            sender.setImage(#imageLiteral(resourceName: "down_full"), for: .normal)
+        } else if sender == moveUpHalfButtonOne || sender == moveUpHalfButtonTwo {
+            sender.setImage(#imageLiteral(resourceName: "up_half"), for: .normal)
+        } else if sender == moveDownHalfButtonOne || sender == moveDownHalfButtonTwo {
+            sender.setImage(#imageLiteral(resourceName: "down_half"), for: .normal)
+        } else if sender == moveUpFullButton {
+            sender.setImage(#imageLiteral(resourceName: "up_full"), for: .normal)
+        } else {
+            print("ERROR - invalid button")
+        }
     }
-
+    
+    @IBAction func moveButtonTouchDown(_ sender: UIButton) {
+        // Set image to selected image
+        if sender == moveDownFullButton {
+            sender.setImage(#imageLiteral(resourceName: "down_full_selected"), for: .normal)
+        } else if sender == moveUpHalfButtonOne || sender == moveUpHalfButtonTwo {
+            sender.setImage(#imageLiteral(resourceName: "up_half_selected"), for: .normal)
+        } else if sender == moveDownHalfButtonOne || sender == moveDownHalfButtonTwo {
+            sender.setImage(#imageLiteral(resourceName: "down_half_selected"), for: .normal)
+        } else if sender == moveUpFullButton {
+            sender.setImage(#imageLiteral(resourceName: "up_full_selected"), for: .normal)
+        } else {
+            print("ERROR - invalid button")
+        }
+    }
+    
     func swapWithEventBelow(eventIndex: Int) {
         // Set placeholder events
         let eventOne = round.events[eventIndex]
